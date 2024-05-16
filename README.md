@@ -1,22 +1,3 @@
-# OpenSource
+# Static folder
 
-### Installation
-
-```
-# node 16+
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-
-### Build
-
-```
-$ yarn build
-```
-
+This folder houses static assets: https://docusaurus.io/docs/static-assets
