@@ -23,7 +23,7 @@
     {
         "name": "tc-i18n",
         "logoUrl": "projects/tc-i18n.png",
-        "description": "tc-i18n is a lightweight, front-end multilingual solution. Its features include non-intrusive business logic and framework agnosticism.",
+        "description": "tc-i18n is a lightweight front-end multi-language solution. Its features include non-intrusive business logic and framework agnosticism.",
         "websiteUrl": "https://jameszws.github.io/",
         "githubUrl": " https://github.com/TongchengOpenSource/tc-i18n"
     }
