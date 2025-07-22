@@ -1,0 +1,99 @@
+{
+    "name": "opensource",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "pre:build": "node scripts/changelog-template.js",
+        "build": "npm run build:production",
+        "build:preview": "docusaurus build --locale zh-cn",
+        "build:production": "docusaurus build",
+        "build:github": "docusaurus build  --out-dir github-build",
+        "clear": "docusaurus clear",
+        "crowdin:sync": "docusaurus write-translations && crowdin upload && crowdin download",
+        "deploy": "docusaurus deploy",
+        "docusaurus": "docusaurus",
+        "generate-markdown": "node scripts/native && concurrently \"node scripts/api\" \"node scripts/cli\" \"node scripts/release-notes\"",
+        "serve": "docusaurus serve",
+        "remove-prestart": "node scripts/prepare.js",
+        "start": "docusaurus start",
+        "swizzle": "docusaurus swizzle --danger"
+    },
+    "engines": {
+        "node": ">=18.0"
+    },
+    "resolutions": {
+        "micromark-extension-mdx-expression": "^3.0.0",
+        "micromark-extension-mdxjs": "^3.0.0"
+    },
+    "overrides": {
+        "micromark-extension-mdx-expression": "^3.0.0",
+        "micromark-extension-mdxjs": "^3.0.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.5%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "@docusaurus/core": "^3.3.2",
+        "@docusaurus/mdx-loader": "^3.3.2",
+        "@docusaurus/plugin-client-redirects": "^3.3.2",
+        "@docusaurus/plugin-content-docs": "^3.3.2",
+        "@docusaurus/plugin-content-pages": "^3.3.2",
+        "@docusaurus/plugin-debug": "^3.3.2",
+        "@docusaurus/plugin-google-analytics": "^3.3.2",
+        "@docusaurus/plugin-sitemap": "^3.3.2",
+        "@docusaurus/preset-classic": "^3.3.2",
+        "@docusaurus/theme-classic": "^3.3.2",
+        "@docusaurus/theme-live-codeblock": "^3.3.2",
+        "@docusaurus/theme-mermaid": "^3.3.2",
+        "@easyops-cn/docusaurus-search-local": "^0.40.1",
+        "@mdx-js/react": "^3.0.1",
+        "clsx": "^2.1.1",
+        "commander": "^12.0.0",
+        "concurrently": "^8.2.2",
+        "crowdin": "^3.5.0",
+        "docusaurus-plugin-drawio": "^0.4.0",
+        "docusaurus-plugin-image-zoom": "^2.0.0",
+        "docusaurus-plugin-module-alias": "^0.0.2",
+        "docusaurus-plugin-sass": "^0.2.5",
+        "docusaurus-plugin-umami": "^2.0.0",
+        "flatted": "^3.3.1",
+        "fs-extra": "^11.2.0",
+        "git-changelog-command-line": "^1.101.7",
+        "html-react-parser": "^5.1.10",
+        "mdx-mermaid": "^2.0.0",
+        "mermaid": "^10.9.0",
+        "modern-normalize": "^2.0.0",
+        "plugin-image-zoom": "^1.2.0",
+        "prism-react-renderer": "^2.3.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-live": "^4.1.6",
+        "react-player": "^2.16.0",
+        "rehype-katex": "^7.0.0",
+        "remark-html": "^16.0.1",
+        "remark-math": "^6.0.0",
+        "remark-parse": "^11.0.0",
+        "sass": "^1.76.0",
+        "semver": "^7.6.0",
+        "simple-git": "^3.24.0"
+    },
+    "devDependencies": {
+        "@docusaurus/module-type-aliases": "^3.3.2",
+        "@docusaurus/types": "^3.3.2",
+        "@ionic/prettier-config": "^4.0.0",
+        "@tsconfig/docusaurus": "^2.0.3",
+        "@types/react": "^18.3.1",
+        "prettier": "^3.2.5",
+        "typescript": "^5.4.5"
+    },
+    "docusaurusConfig": {}
+}

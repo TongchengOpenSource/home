@@ -1,0 +1,23 @@
+[
+    {
+        "name": "CKibana",
+        "logoUrl": "projects/ckibana-new.svg",
+        "description": "Visualizing data in ClickHouse using native Kibana.",
+        "websiteUrl": "https://tongchengopensource.github.io/ckibana-docs/",
+        "githubUrl": "https://github.com/TongchengOpenSource/ckibana"
+    },
+    {
+        "name": "Smart-doc",
+        "logoUrl": "logos/ly-pd.png",
+        "description": "Smart-doc is a java restful api document generation tool.",
+        "websiteUrl": "https://smart-doc-group.github.io/#/?id=smart-doc",
+        "githubUrl": "https://github.com/TongchengOpenSource/smart-doc"
+    },
+    {
+        "name": "AppScan",
+        "logoUrl": "projects/AppScan.png",
+        "description": "Security Privacy Guardian (AppScan), a free enterprise-grade automated privacy detection tool.",
+        "websiteUrl": "https://github.com/TongchengOpenSource/AppScan/wiki",
+        "githubUrl": "https://github.com/TongchengOpenSource/AppScan"
+    }
+]

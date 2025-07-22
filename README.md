@@ -3,7 +3,7 @@
 ### Installation
 
 ```
-# node 16+
+# node 18.18.2
 $ yarn
 ```
 

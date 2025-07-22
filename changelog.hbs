@@ -1,0 +1,56 @@
+
+# CHANGE LOG
+
+{{repoName}} changelog
+
+{{#tags}}
+{{#ifEquals name "Unreleased"}}{{else}}
+## 🌈 {{name}} ({{tagDate .}})
+
+{{#ifContainsBreaking commits}}
+### ❗️ Breaking changes
+
+
+{{#groupByScope commits}}
+* **{{scope}}**
+{{#each list}}
+{{#ifCommitBreaking .}}
+  - {{commitDescription .}} ([{{subString hash 0 5}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/commit/{{hash}}) {{authorName}}) {{#eachCommitRefs .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitRefs}} {{#eachCommitFixes .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitFixes}}
+{{/ifCommitBreaking}}
+{{/each}}
+{{/groupByScope}}
+{{/ifContainsBreaking}}
+
+
+{{#ifContainsType commits type='feat'}}
+### 🚀 Features
+
+{{#groupByScope commits type='feat'}}
+* **{{scope}}**
+{{#each list}}
+{{#ifCommitType . type='feat'}}
+  - {{commitDescription .}} ([{{subString hash 0 5}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/commit/{{hash}}) {{authorName}}) {{#eachCommitRefs .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitRefs}} {{#eachCommitFixes .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitFixes}}
+{{/ifCommitType}}
+{{/each}}
+{{/groupByScope}}
+
+{{/ifContainsType}}
+
+
+{{#ifContainsType commits type='fix'}}
+### 🐞 Bug Fixes
+
+{{#groupByScope commits type='fix'}}
+* **{{scope}}**
+{{#each list}}
+{{#ifCommitType . type='fix'}}
+  - {{commitDescription .}} ([{{subString hash 0 5}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/commit/{{hash}}) {{authorName}}) {{#eachCommitRefs .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitRefs}} {{#eachCommitFixes .}}{{#ifMatches . "^#[0-9]+"}} [{{.}}](https://git.17usoft.com/{{ownerName}}/{{repoName}}/issues/{{subString . 1}}) {{/ifMatches}}{{/eachCommitFixes}}
+{{/ifCommitType}}
+{{/each}}
+{{/groupByScope}}
+
+
+{{/ifContainsType}}
+
+{{/ifEquals}}
+{{/tags}}

@@ -1,0 +1,10 @@
+{
+    "githubConfig": {
+        "repository": "https://github.com/TongchengOpenSource/home.git",
+        "accessToken": "",
+        "userName": "zone",
+        "userEmail": "",
+        "branch": "main",
+        "baseURL": "/home/"
+    }
+}

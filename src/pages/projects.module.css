@@ -1,0 +1,52 @@
+.banner{
+    height: auto;
+    padding: 4.7rem 2rem;
+    color: #ffffff;
+    /*background: var(--iframe-color-theme);*/
+    background: var(--iframe-color-banner);
+}
+.banner > div{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+}
+.banner h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 2.8rem 0;
+}
+.banner input{
+    font-size: 1.2rem;
+    font-weight: normal;
+    max-width: 500px;
+    margin: 0rem 0;
+    border-radius: 2rem;
+    /*background: var(--iframe-color-theme-darker);*/
+    background: var(--iframe-color-banner-darker);
+    border: none;
+    width: auto;
+    min-width: 300px;
+    padding: 0.5rem 1.5rem;
+    color: #ffffff;
+    outline: none;
+}
+.banner input::placeholder{
+    color: #ffffff;
+}
+.projectsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0rem 0;
+}
+@media screen and (min-width: 1080px) {
+    .projectsList {
+        max-width: 1080px;
+        width: auto;
+        min-width: 420px;
+        margin: 0 auto;
+    }
+}
